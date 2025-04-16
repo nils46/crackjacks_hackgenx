@@ -1,2 +1,2 @@
-# crackjacks_hackgenx
-a satellite based monitoring tool which remotely sense forest image ,aim is to detect illegal activity in forest(deforestation)
+here we are using  S2A_MSIL1C_20220516_Train_GT.tif to train on basis of S2A_MSIL1C_20220516_Train_GT.tif ground truth data
+. we implemented one classification model for it, and we are using concept of ploting classifiaction model on image before and after . so we taken dataset for testing from kaggle ,which is having sentinel-1 as before and sentinel-2 as after image. so by classifying this image 
