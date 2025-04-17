@@ -7,18 +7,14 @@ from sklearn import preprocessing
 from matplotlib.colors import LinearSegmentedColormap
 
 def create_custom_colormap():
-    
     colors = [(0, 'darkgreen'), (0.5, 'yellow'), (1, 'red')]
     return LinearSegmentedColormap.from_list('custom', colors)
 
 def analyze_images(before_image_path, after_image_path):
-    
     print("\n=== Starting Deforestation Analysis ===")
-    
     
     print("\n1. Loading images...")
     try:
-        
         with rasterio.open(before_image_path) as src:
             before_img = src.read()
             print(f"Before image loaded: {before_img.shape}")
@@ -84,7 +80,6 @@ def analyze_images(before_image_path, after_image_path):
         plt.savefig('deforestation_analysis.png', dpi=300, bbox_inches='tight')
         plt.close()
         
-       
         print("\n=== Analysis Results ===")
         print(f"Total area analyzed: {total_pixels:,} pixels")
         print(f"Deforested area: {deforested_pixels:,} pixels")
